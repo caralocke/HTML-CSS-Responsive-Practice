@@ -85,3 +85,190 @@ h3{
 section{
     padding: 4% 0;
 }
+/*Header Section styles*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color:rgba(255, 255, 255, 0.8);
+    position: fixed;
+    width: 100%;
+    z-index:999;
+    top: 0;
+}
+.logo{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img {
+    width: 50%;
+}
+.links{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/*Top Section Styles*/
+#home{
+    height:80vh;
+    background-image:url("../images/header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/*About Section Styles*/
+#about{
+    display: flex;
+    justify-content: flex-end;
+    background-image:url('../images/about-img.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 12% 0;
+}
+#about div{
+    width: 20%;
+    margin-right: 10%;
+    padding:4%;
+}
+
+/*Shop Section Styles*/
+.container{
+    display:flex;    
+}
+.shopText{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shoptText div{
+    width: 80%;
+    margin:0 auto;
+    text-align: center;
+}
+.bg-img{
+    width: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 40vh;
+}
+.succulants{
+    background-image:url('../images/succulants.jpg') ;
+}
+.cacti{
+    background-image:url('../images/cacti.jpg') ;
+}
+.tropicals{
+    background-image:url('../images/tropicals.jpg') ;
+}
+/*footer*/
+#contact{
+    display: flex;
+    flex-wrap: wrap;
+    color:#FBFFFB;
+    background-color:#266035;
+}
+#contact h2{
+    width: 100%;
+}
+#contact p.copyright{
+    width: 100%;
+    text-align: right;
+    margin-right: 10%;
+}
+.left, .right{
+    width: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.right img{
+    width: 50%;
+}
+.left div{
+    width:40%;
+    line-height: 2;
+}
+#contact h3{
+    color:#FBFFFB;
+}
+#contact a{
+    color:#FBFFFB;
+}
+
+/*Responsive Styles*/
+/*Break points*/
+/*
+max-width scales down, this is for desktop first design
+min-width scales up, this is for mobile first design
+*/
+/*tablet*/
+@media(max-width:800px) {
+    #about div{
+        width:40%;
+    }
+    .shopText div{
+        width: 70%;
+    }
+}    
+/*phone*/
+@media(max-width:500px){
+   /*nav*/
+   nav{
+       flex-direction: column;
+       align-items: center;
+   }
+   .links{
+       width: 100%;
+   }
+   .logo{
+       width: 25%;
+   }
+   #home button{
+       display:none;
+   }
+   #about{
+       background-image: none;
+       background-color:#e2e3e5;
+       justify-content: center;
+   }
+   #about div{
+       margin-right: 0;
+       width: 80%;
+   }
+   .container{
+       flex-direction: column;
+   }
+   .bg-img, .shopText{
+       width: 90%;
+       align-items: center;
+   }
+   .mobileSpecific{
+       flex-direction: column-reverse;
+   }
+   .shopText div{
+       width: 100%;
+   }
+    .left, .right{
+           width: 100%;
+       }
+   #contact h2{
+       color: #FBFFFB;
+   }
+   #contact p.copyright{
+       text-align: center;
+       margin: 0;
+   }
+   .left div{
+       width: 50%;
+   }
+}
